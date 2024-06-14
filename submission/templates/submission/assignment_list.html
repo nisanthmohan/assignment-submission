@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignments</title>
+</head>
+<body>
+    
+    <h1>Assignments</h1>
+    <ul>
+        {% for i in assignments %}
+            <li>
+                <a href="{% url 'submission_list' i.id %}">{{ i.title }}</a>
+                (Due: {{ i.due_date }})
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="http://127.0.0.1:8000/admin/">teacher</a>
+</body>
+</html>

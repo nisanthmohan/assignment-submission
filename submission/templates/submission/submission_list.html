@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submissions for {{ assign.title }}</title>
+</head>
+<body>
+    <button><a href="{% url 'submission_create' assign.id %}">Add ur assignment</a></button>
+    <h1>Submissions for {{ assignment.title }}</h1>
+    <ul>
+        {% for submission in submissions %}
+            <li>{{ submission.student.username }} - {{ submission.submitted_at }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
